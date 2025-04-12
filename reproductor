@@ -1,1 +1,86 @@
+<!DOCTYPE html>
+
+
+<html>
+
+
+<head>
+
+
+ 
+</head>
+
+
+<body class='login' onLoad="openAdvert()">
+<b>
+<b>
+<b>
+<center>ESCUCHAS INSTRUMENTAL SKY RADIO</center>
+<b>
+<b>
+<b>
+<center><script>
+function cambiarTrack(track) {
+   var path =  track.getAttribute("path")
+   viejo_audio = document.getElementById("reproductor")
+   audio_padre = viejo_audio.parentNode
+   audio_padre.removeChild(viejo_audio)
+   nuevo_audio = document.createElement("audio")
+   nuevo_audio.setAttribute("id","reproductor")
+   nuevo_audio.setAttribute("controls", "controls")
+   nuevo_audio.setAttribute("autoplay", "autoplay")
+   source = document.createElement("source")
+   source.setAttribute("src", path)
+   source.setAttribute("type", "audio/mpeg")
+   source.setAttribute("id", "reproductorSource")
+   nuevo_audio.appendChild(source)
+   audio_padre.appendChild(nuevo_audio)}
+function cargarReproductor() {
+         var select = document.getElementById("selectTrack")
+         var path = select.options[0].getAttribute("path")
+   nuevo_audio = document.createElement("audio")
+   nuevo_audio.setAttribute("id","reproductor")
+   nuevo_audio.setAttribute("controls", "controls")       
+   nuevo_audio.setAttribute("autoplay", "autoplay")
+   source = document.createElement("source")
+   source.setAttribute("src", path)
+   source.setAttribute("type", "audio/mpeg")
+   source.setAttribute("id", "reproductorSource")
+   nuevo_audio.appendChild(source)
+   padre = document.getElementById("reproductorBox")
+   padre.appendChild(nuevo_audio)
+}
+</script>
+<div id="reproductorBox"></div>
+<select id = "selectTrack" multiple onchange="cambiarTrack(this.options[this.selectedIndex]);">
+<option path="https://uk18freenew.listen2myradio.com/live.mp3?typeportmount=s1_27215_stream_493199456">.....SKY 
+
+RADIO.....</option>
+<option path="https://stream-167.zeno.fm/0ouimnuh4cluv?
+
+zt=eyJhbGciOiJIUzI1NiJ9.eyJzdHJlYW0iOiIwb3VpbW51aDRjbHV2IiwiaG9zdCI6InN0cmVhbS0xNjcuemVuby5mbSIsInJ0dGwiOjUsImp0aSI6Iml6WS1ra
+
+zNPVHQtMzlWZlFYZjE2cFEiLCJpYXQiOjE3NDM5OTEyNzcsImV4cCI6MTc0Mzk5MTMzN30.l0a95cH-
+
+ipEtT4TQN8FtLFmQzhNYUviPxg2mEuk4b08">.....RADIO MARIN.....</option>
+<option path="https://node-07.zeno.fm/tvqmp6dwk2zuv.aac?rj-ttl=5&rj-tok=AAABc_GuYdEAgvYBZ9BdnZ-40Q">HISPANA 89.5 FM</option>
+<option path="https://node-09.zeno.fm/2b9kfa1dzmzuv?rj-ttl=5&rj-tok=AAABdCZeCMsA_u6uerfuIwHRVQ">BONCHONA</option>
+<option path="C:\Users\Pc\Desktop\UB 40Redredwine.mp3">
+RADIO MINUTO 790 am</option>
+<option path="http://streamingned.com:7286/;stream.nsv">BALADA STEREO</option>
+<option path="http://radiolatina.info:7087/;">VALLENATOS</option>
+<option path="https://server6.globalhostla.com:9020/stream">
+CANDELA PURA</option>
+</select>
+<script>cargarReproductor();</script>
+  </center>
+
+
+
+</body>
+
+
+</html>
+
+
 
